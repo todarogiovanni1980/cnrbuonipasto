@@ -42,11 +42,17 @@ $doc->addScript(JUri::base() . '/media/com_cnrbuonipasto/js/form.js');
 	}
 </script>
 
+<?php if ( $this->params->get('show_page_heading')!=0) : ?>
+    <h1>
+<?php echo $this->escape($this->params->get('page_heading')); ?>
+    </h1>
+<?php endif; ?>
+
 <div class="consegna-edit front-end-edit">
 	<?php if (!empty($this->item->id)): ?>
-		<h1>Edit <?php echo $this->item->id; ?></h1>
+		<h1>Modifica blocchetto <?php echo $this->item->numero; ?></h1>
 	<?php else: ?>
-		<h1>Add</h1>
+		<h1>Inserimento</h1>
 	<?php endif; ?>
 
 	<form id="form-consegna"
