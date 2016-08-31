@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.0" method="upgrade" client="site">
+    <name>MOD_CNRBUONIPASTO_NAME</name>
+    <creationDate>2016-08-31</creationDate>
+    <copyright>2016 Todaro Giovanni - Consiglio Nazionale delle Ricerche -  Istituto per le Tecnologie Didattiche</copyright>
+    <license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+    <author>Todaro Giovanni - Consiglio Nazionale delle Ricerche -  Istituto per le Tecnologie Didattiche</author>
+    <authorEmail>giovanni.todaro@itd.cnr.it</authorEmail>
+    <authorUrl>http://www.pa.itd.cnr.it</authorUrl>
+    <version>CVS: 1.0.0</version>
+    <description>MOD_CNRBUONIPASTO_DESCRIPTION</description>
+    
+    <files>
+        <filename module="mod_cnrbuonipasto">mod_cnrbuonipasto.php</filename>
+        <filename>helper.php</filename>
+        <filename>index.html</filename>
+        <folder>tmpl</folder>
+    </files>
+    <languages folder="../../languages/modules/mod_cnrbuonipasto">
+        
+			<language tag="en-GB">en-GB/en-GB.mod_cnrbuonipasto.ini</language>
+			<language tag="en-GB">en-GB/en-GB.mod_cnrbuonipasto.sys.ini</language>
+			<language tag="it-IT">it-IT/it-IT.mod_cnrbuonipasto.ini</language>
+			<language tag="it-IT">it-IT/it-IT.mod_cnrbuonipasto.sys.ini</language>
+    </languages>
+    <config>
+        <fields name="params">
+            <fieldset 
+                name="content_type" 
+                label="MOD_CNRBUONIPASTO_CONTENT_TYPE_TAB_LBL"
+                description="MOD_CNRBUONIPASTO_CONTENT_TYPE_TAB_DESC">
+                <field
+                    name="content_type" type="list"
+                    label="MOD_CNRBUONIPASTO_CONTENT_TYPE_LBL"
+                    description="MOD_CNRBUONIPASTO_CONTENT_TYPE_DESC">
+                    <option value="blank">MOD_CNRBUONIPASTO_CUSTOM_CONTENT</option>
+                    <option value="list">MOD_CNRBUONIPASTO_LIST</option>
+                    <option value="item">MOD_CNRBUONIPASTO_ITEM</option>
+                </field>
+            </fieldset>
+            <fieldset 
+                name="blank_content" 
+                label="MOD_CNRBUONIPASTO_CUSTOM_CONTENT_TAB_LBL"
+                description="MOD_CNRBUONIPASTO_CUSTOM_CONTENT_TAB_DESC">
+                <field 
+                    name="html_content" type="editor" filter="safehtml"
+                    label="MOD_CNRBUONIPASTO_HTML_LBL"
+                    description="MOD_CNRBUONIPASTO_HTML_DESC" />
+            </fieldset>
+            <fieldset 
+                name="list_content" 
+                label="MOD_CNRBUONIPASTO_LIST_CONTENT_TAB_LBL"
+                description="MOD_CNRBUONIPASTO_LIST_CONTENT_TAB_DESC">
+                <field
+                    name="table" type="list"
+                    label="MOD_CNRBUONIPASTO_TABLE_LBL"
+                    description="MOD_CNRBUONIPASTO_TABLE_DESC">
+                    
+	<option value="#__cnrbuonipasto_consegne">#__cnrbuonipasto_consegne</option>
+                </field>
+                <field 
+                    name="field" type="groupedlist" default=""
+                    label="MOD_CNRBUONIPASTO_FIELD_LBL"
+                    description="MOD_CNRBUONIPASTO_FIELD_DESC">
+                    
+	<group label="#__cnrbuonipasto_consegne">
+		<option value="id">id</option>
+		<option value="created_by">created_by</option>
+		<option value="modified_by">modified_by</option>
+		<option value="dataconsegna">dataconsegna</option>
+		<option value="dipendente">dipendente</option>
+		<option value="numero">numero</option>
+		<option value="quantita">quantita</option>
+	</group>
+                </field>
+                <field 
+                    name="offset" type="text" default="0" filter="uint" class="input-small"
+                    label="MOD_CNRBUONIPASTO_OFFSET_LBL"
+                    description="MOD_CNRBUONIPASTO_OFFSET_DESC" />
+                <field 
+                    name="limit" type="text" default="10" filter="uint" class="input-small"
+                    label="MOD_CNRBUONIPASTO_LIMIT_LBL"
+                    description="MOD_CNRBUONIPASTO_LIMIT_DESC" />
+            </fieldset>
+            <fieldset 
+                name="item_content" 
+                label="MOD_CNRBUONIPASTO_ITEM_CONTENT_TAB"
+                description="MOD_CNRBUONIPASTO_ITEM_CONTENT_TAB_DESC">
+                <field
+                    name="item_table" type="list"
+                    label="MOD_CNRBUONIPASTO_TABLE_LBL"
+                    description="MOD_CNRBUONIPASTO_TABLE_DESC">
+                    
+	<option value="#__cnrbuonipasto_consegne">#__cnrbuonipasto_consegne</option>
+                </field>
+                <field 
+                    name="item_id" type="text" filter="uint" class="input-small"
+                    label="MOD_CNRBUONIPASTO_ITEM_ID_LBL"
+                    description="MOD_CNRBUONIPASTO_ITEM_ID_DESC"
+                />
+            </fieldset>
+        </fields>
+    </config>
+</extension>

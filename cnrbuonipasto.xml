@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="3.0" method="upgrade">
+    <name>com_cnrbuonipasto</name>
+    <creationDate>2016-08-31</creationDate>
+    <copyright>2016 Todaro Giovanni - Consiglio Nazionale delle Ricerche -  Istituto per le Tecnologie Didattiche</copyright>
+    <license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+    <author>Todaro Giovanni - Consiglio Nazionale delle Ricerche -  Istituto per le Tecnologie Didattiche</author>
+    <authorEmail>giovanni.todaro@itd.cnr.it</authorEmail>
+    <authorUrl>http://www.pa.itd.cnr.it</authorUrl>
+    <version>1.0.0</version>
+    <description>Gestione Buoni Pasto</description>
+    
+    <scriptfile>script.php</scriptfile>
+    
+    <install> <!-- Runs on install -->
+        <sql>
+            <file driver="mysql" charset="utf8">sql/install.mysql.utf8.sql</file>
+        </sql>
+    </install>
+    <update> <!-- Runs on update -->
+        <sql>
+            <file driver="mysql" charset="utf8">sql/update.mysql.utf8.sql</file>
+        </sql>
+    </update>
+    <uninstall> <!-- Runs on uninstall -->
+        <sql>
+            <file driver="mysql" charset="utf8">sql/uninstall.mysql.utf8.sql</file>
+        </sql>
+    </uninstall>
+
+    <files folder="site">
+        <filename>index.html</filename>
+        <filename>cnrbuonipasto.php</filename>
+        <filename>controller.php</filename>
+        <filename>router.php</filename>
+        <folder>views</folder>
+        <folder>models</folder>
+        <folder>controllers</folder>
+        <folder>helpers</folder>
+    </files>
+    <media destination="com_cnrbuonipasto" folder="media">
+        <folder>js</folder>
+        <folder>css</folder>
+    </media>
+    <languages folder="languages/site">
+        
+			<language tag="en-GB">en-GB/en-GB.com_cnrbuonipasto.ini</language>
+			<language tag="it-IT">it-IT/it-IT.com_cnrbuonipasto.ini</language>
+    </languages>
+    <administration>
+        <menu img="media/com_cnrbuonipasto/images/s_com_cnrbuonipasto.png" >COM_CNRBUONIPASTO</menu>
+        <submenu>
+            
+			<menu link="option=com_cnrbuonipasto&amp;view=consegne" view="consegne" img="media/com_cnrbuonipasto/images/s_consegne.png" alt="Cnrbuonipasto/Consegne">COM_CNRBUONIPASTO_TITLE_CONSEGNE</menu>
+
+        </submenu>
+        <files folder="administrator">
+            <filename>access.xml</filename>
+            <filename>config.xml</filename>
+            <filename>controller.php</filename>
+            <filename>index.html</filename>
+            <filename>cnrbuonipasto.php</filename>
+            <folder>controllers</folder>
+            <folder>assets</folder>
+            <folder>helpers</folder>
+            <folder>models</folder>
+            <folder>sql</folder>
+            <folder>tables</folder>
+            <folder>views</folder>
+        </files>
+        <languages folder="languages/administrator">
+            
+			<language tag="en-GB">en-GB/en-GB.com_cnrbuonipasto.ini</language>
+			<language tag="en-GB">en-GB/en-GB.com_cnrbuonipasto.sys.ini</language>
+			<language tag="it-IT">it-IT/it-IT.com_cnrbuonipasto.ini</language>
+			<language tag="it-IT">it-IT/it-IT.com_cnrbuonipasto.sys.ini</language>
+        </languages>
+    </administration>
+    <config>
+        <fields name="params">
+            <fieldset name="component">
+                <field name="save_history" default="0" />
+            </fieldset>
+        </fields>
+    </config>
+    <plugins>
+        <plugin group="search" plugin="cnrbuonipasto"/>
+    </plugins>
+    <modules>
+		<module module="mod_cnrbuonipasto" />
+	</modules>
+    
+    <updateservers>
+        <server type="extension" priority="2" name="Gestione Magazzino Semplice">https://raw.githubusercontent.com/todarogiovanni1980/cnrbuonipasto/master/extension.xml</server>
+    </updateservers>
+</extension>
