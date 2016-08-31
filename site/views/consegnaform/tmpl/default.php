@@ -52,7 +52,7 @@ $doc->addScript(JUri::base() . '/media/com_cnrbuonipasto/js/form.js');
 	<?php if (!empty($this->item->id)): ?>
 		<h1>Modifica blocchetto <?php echo $this->item->numero; ?></h1>
 	<?php else: ?>
-		<h1>Inserimento</h1>
+		<h1>Consegna blocchetto</h1>
 	<?php endif; ?>
 
 	<form id="form-consegna"
