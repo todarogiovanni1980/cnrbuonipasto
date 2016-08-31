@@ -7,7 +7,7 @@
     <author>Todaro Giovanni - Consiglio Nazionale delle Ricerche -  Istituto per le Tecnologie Didattiche</author>
     <authorEmail>giovanni.todaro@itd.cnr.it</authorEmail>
     <authorUrl>http://www.pa.itd.cnr.it</authorUrl>
-    <version>1.0.0</version>
+    <version>1.0.1</version>
     <description>Gestione Buoni Pasto</description>
     
     <scriptfile>script.php</scriptfile>

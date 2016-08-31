@@ -25,6 +25,12 @@ $canChange  = $user->authorise('core.edit.state', 'com_cnrbuonipasto');
 $canDelete  = $user->authorise('core.delete', 'com_cnrbuonipasto');
 ?>
 
+<?php if ( $this->params->get('show_page_heading')!=0) : ?>
+    <h1>
+<?php echo $this->escape($this->params->get('page_heading')); ?>
+    </h1>
+<?php endif; ?>
+
 <form action="<?php echo JRoute::_('index.php?option=com_cnrbuonipasto&view=consegne'); ?>" method="post"
       name="adminForm" id="adminForm">
 
