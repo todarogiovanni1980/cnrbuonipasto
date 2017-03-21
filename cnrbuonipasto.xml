@@ -91,6 +91,6 @@
 	</modules>
     
     <updateservers>
-        <server type="extension" priority="2" name="Gestione Buoni Pasto">https://raw.githubusercontent.com/todarogiovanni1980/cnrbuonipasto/master/extension.xml</server>
+        <server type="extension"  name="Gestione Buoni Pasto">https://raw.githubusercontent.com/todarogiovanni1980/cnrbuonipasto/master/extension.xml</server>
     </updateservers>
 </extension>
