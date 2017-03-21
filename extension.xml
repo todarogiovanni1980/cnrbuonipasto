@@ -14,5 +14,5 @@
     <tags>
         <tag>dev</tag>
     </tags>
-    <targetplatform name="joomla" version="3.6"/>
+    <targetplatform name="joomla" version="3.6.5"/>
 </update>
