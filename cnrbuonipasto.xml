@@ -7,7 +7,7 @@
     <author>Todaro Giovanni - Consiglio Nazionale delle Ricerche -  Istituto per le Tecnologie Didattiche</author>
     <authorEmail>giovanni.todaro@itd.cnr.it</authorEmail>
     <authorUrl>http://www.pa.itd.cnr.it</authorUrl>
-    <version>1.0.3</version>
+    <version>1.0.4</version>
     <description>Gestione Buoni Pasto</description>
     
     <scriptfile>script.php</scriptfile>
@@ -91,6 +91,6 @@
 	</modules>
     
     <updateservers>
-        <server type="extension" priority="2" name="Gestione Magazzino Semplice">https://raw.githubusercontent.com/todarogiovanni1980/cnrbuonipasto/master/extension.xml</server>
+        <server type="extension" priority="2" name="Gestione Buoni Pasto">https://raw.githubusercontent.com/todarogiovanni1980/cnrbuonipasto/master/extension.xml</server>
     </updateservers>
 </extension>
